@@ -1,0 +1,48 @@
+#signupbutton{
+    margin-top: 30px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgb(49, 49, 49);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#signupbutton:hover {
+    background-color: rgb(133, 133, 133);
+}
+
+div{
+    margin-bottom: 20px;
+}
+
+#email{
+    margin-bottom: 20px;
+}
+
+#h1{
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 10px;
+    width: 300px;
+}
+
+a{
+    color: rgb(49, 49, 49) !important;
+    margin-top: 20px;
+}
+
+.error-message {
+    margin-top: 10px;
+    color: red;
+}
