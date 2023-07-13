@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <?php if ($is_invalid): ?>
                 <em class="error-message">Invalid login</em>
             <?php endif; ?>
-            <a href="forgot-password.php">Forgot password?</a>
+            <a href="forgot-password.html">Forgot password?</a>
             <a href="signup.php">Don't have an account?</a>
         </div>
     </form>
