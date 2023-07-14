@@ -1,9 +1,7 @@
 <?php
-
 session_start();
 
 if (isset($_SESSION["user_id"])) {
-    
     $mysqli = require __DIR__ . "/database.php";
     
     $sql = "SELECT * FROM user
@@ -13,8 +11,8 @@ if (isset($_SESSION["user_id"])) {
     
     $user = $result->fetch_assoc();
 }
-
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,24 +36,26 @@ if (isset($_SESSION["user_id"])) {
           <a class="nav-link" href="#">Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Logout.php">Log out</a>
+          <?php if(isset($_SESSION["user_id"])) : ?>
+            <a class="nav-link" href="Logout.php">Log out</a>
+          <?php else: ?>
+            <a class="nav-link" href="signup.php">Sign up</a>
+          <?php endif; ?>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<div class="container">
+  <?php if(isset($_SESSION["user_id"])) : ?>
+    <h1>Hello, <?php echo $user["name"] ?></h1>
+  <?php else : ?>
+    <h1>You are not logged in</h1>
+  <?php endif; ?>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
