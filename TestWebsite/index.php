@@ -45,7 +45,7 @@ if (isset($_SESSION["user_id"])) {
       </ul>
       <?php if(isset($_SESSION["user_id"])) : ?>
         <span class="navbar-text">
-          <?php echo $user["name"] ?>
+          <?php echo "Welcome, " . $user["name"] . "!"; ?>
         </span>
       <?php endif; ?>
     </div>
