@@ -47,4 +47,19 @@ a{
     color: red;
 }
 
+.pass_input {
+    position: relative;
+}
+
+#password {
+    padding-right: 40px; /* Space for the icon */
+}
+
+#icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
 
